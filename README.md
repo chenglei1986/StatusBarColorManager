@@ -2,7 +2,7 @@
 
 ## About
 
-A library which help you to change status bar in a simple way.
+A library which help you to change status bar color in a simple way.
 
 - No `style.xml`, just java code.
 - The status bar color can be changed more than once in an Activity.

@@ -6,6 +6,7 @@ A library which help you to change status bar color in a simple way.
 
 - No `style.xml`, just java code.
 - The status bar color can be changed more than once in an Activity.
+- If you set a light color even WHITE, it will know.
 - Support **MIUI** and **Flyme OS**.
 - I don't like the `NavigationBar`, so it's better to keep it in black.
 

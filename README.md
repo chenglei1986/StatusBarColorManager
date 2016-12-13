@@ -1,5 +1,7 @@
 # StatusBarColorManager
 
+[ ![Download](https://api.bintray.com/packages/darren/maven/StatusBarColorManager/images/download.svg) ](https://bintray.com/darren/maven/StatusBarColorManager/_latestVersion)
+
 ## About
 
 A library which help you to change status bar color in a simple way.
@@ -25,6 +27,13 @@ A library which help you to change status bar color in a simple way.
 #### Marshmallow
 
 ![Marshmallow dark](screenshots/layout_fullscreen_dark_marshmallow.png) ![Marshmallow light](screenshots/layout_fullscreen_light_marshmallow.png)
+
+## Download
+
+```gradle
+compile 'com.github.chenglei1986.statusbar:library:1.0.0'
+```
+
 
 ## Usage
 

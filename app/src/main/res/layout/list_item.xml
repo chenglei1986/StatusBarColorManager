@@ -6,12 +6,6 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal">
 
-    <View
-        android:id="@+id/indicator"
-        android:layout_width="2dp"
-        android:layout_height="match_parent"
-        tools:background="#3F51B5"/>
-
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"

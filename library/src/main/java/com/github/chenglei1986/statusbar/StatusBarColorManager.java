@@ -1,11 +1,9 @@
 package com.github.chenglei1986.statusbar;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.Build;
 import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
-import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,9 +21,10 @@ public class StatusBarColorManager {
     public StatusBarColorManager(@NonNull Activity activity) {
         mActivity = activity;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            StatusBarUtil.setTranslucentStatus(mActivity);
 
             mDecorView = (ViewGroup) activity.getWindow().getDecorView();
-            mContentView = (ViewGroup) mDecorView.findViewById(android.R.id.content);
+            mContentView = (ViewGroup) ((ViewGroup) mDecorView.findViewById(android.R.id.content)).getChildAt(0);
             if (null == mStatusBarBackground) {
                 mStatusBarBackground = new FrameLayout(activity);
             }
@@ -34,15 +33,13 @@ public class StatusBarColorManager {
         }
     }
 
-    public void setStatusBarColor(@ColorInt int color, boolean withActionBar) {
+    public void setStatusBarColor(@ColorInt int color, boolean layoutFullscreen, boolean withActionBar) {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
             return;
         }
         mDecorView.removeView(mStatusBarBackground);
         mStatusBarBackground.removeAllViews();
-        StatusBarUtil.setTranslucentStatus(mActivity);
         if (ColorUtil.isLightColor(color)) {
-
             boolean darkMode = false;
             if (BrandUtil.checkBrand(BrandUtil.BRAND.XIAOMI)) {
                 darkMode = StatusBarUtil.setMiuiStatusBarIconDarkMode(mActivity, true);
@@ -67,9 +64,9 @@ public class StatusBarColorManager {
                 StatusBarUtil.setFlymeStatusBarIconDarkMode(mActivity, false);
             }
         }
-        int contentViewPaddingTop = withActionBar ? (mStatusBarHeight + mActionBarHeight) : mStatusBarHeight;
+        int contentViewPaddingTop = (layoutFullscreen ? 0 : mStatusBarHeight) + (withActionBar ? mActionBarHeight : 0);
         mContentView.setPadding(mContentView.getPaddingLeft(), contentViewPaddingTop, mContentView.getPaddingRight(), mContentView.getPaddingBottom());
-        mStatusBarBackground.setBackgroundColor(color);
+        mStatusBarBackground.setBackgroundColor(layoutFullscreen ? 0x00000000 : color);
         mDecorView.addView(mStatusBarBackground, ViewGroup.LayoutParams.MATCH_PARENT, mStatusBarHeight);
     }
 

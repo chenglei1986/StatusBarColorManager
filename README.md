@@ -12,7 +12,19 @@ A library which help you to change status bar color in a simple way.
 
 ## Preview
 
+### Colored status bar
+
 ![KitKat](screenshots/kitkat.png) ![Lollipop](screenshots/lollipop.png) ![Marshmallow](screenshots/marshmallow.png)
+
+### Layout fullscreen
+
+#### Lollipop
+
+![Lollipop dark](screenshots/layout_fullscreen_dark_lollipop.png) ![Lollipop light](screenshots/layout_fullscreen_light_lollipop.png)
+
+#### Marshmallow
+
+![Marshmallow dark](screenshots/layout_fullscreen_dark_marshmallow.png) ![Marshmallow light](screenshots/layout_fullscreen_light_marshmallow.png)
 
 ## Usage
 

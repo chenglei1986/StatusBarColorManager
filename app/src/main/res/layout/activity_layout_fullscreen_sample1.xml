@@ -5,11 +5,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/randomColor"
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="Random Color"/>
+        android:layout_height="match_parent"
+        android:src="@mipmap/sample1"
+        android:scaleType="centerCrop"/>
 
 </LinearLayout>

@@ -17,6 +17,14 @@
         </activity>
 
         <activity android:name=".ColoredStatusBarActivity"/>
+
+        <activity
+            android:name=".LayoutFullscreenSample1"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
+        <activity
+            android:name=".LayoutFullscreenSample2"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
     </application>
 
 </manifest>

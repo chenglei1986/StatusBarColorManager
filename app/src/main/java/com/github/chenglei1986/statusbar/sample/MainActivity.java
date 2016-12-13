@@ -9,11 +9,9 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-    private static final String[] TITLES = {"Light", "Dark", "Blue"};
+    private static final String[] TITLES = {"Light", "Dark", "Blue", "LayoutFullscreenSample1", "LayoutFullscreenSample2"};
     private static final int[] COLORS = {0xFFCCCCCC, 0xFF333333, 0xFF3F51B5};
 
     private ListView mListView;
@@ -29,8 +27,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        int statusBarColor = COLORS[position];
-        ColoredStatusBarActivity.actionColoredStatusBar(this, statusBarColor);
+        if (position < 3) {
+            int statusBarColor = COLORS[position];
+            ColoredStatusBarActivity.actionColoredStatusBar(this, statusBarColor);
+        } else if (3 == position) {
+            LayoutFullscreenSample1.actionLayoutFullscreenSample1(this);
+        } else if (4 == position) {
+            LayoutFullscreenSample2.actionLayoutFullscreenSample2(this);
+        }
     }
 
     private class MyAdapter extends BaseAdapter {
@@ -56,20 +60,17 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             if (null == convertView) {
                 convertView = getLayoutInflater().inflate(R.layout.list_item, parent, false);
                 holder = new ViewHolder();
-                holder.indicator = convertView.findViewById(R.id.indicator);
                 holder.title = (TextView) convertView.findViewById(R.id.title);
                 convertView.setTag(holder);
             } else {
                 holder = (ViewHolder) convertView.getTag();
             }
-            holder.indicator.setBackgroundColor(COLORS[position]);
             holder.title.setText(TITLES[position]);
             return convertView;
         }
     }
 
     private static class ViewHolder {
-        View indicator;
         TextView title;
     }
 

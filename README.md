@@ -32,7 +32,9 @@ A library which help you to change status bar color in a simple way.
 
 ```java
 StatusBarColorManager statusBarColorManager = new StatusBarColorManager(activity);
-statusBarColorManager.setStatusBarColor(color, withActionBar);
+boolean layoutFullscreen = true; // or false
+boolean withActionBar = false; // or true
+statusBarColorManager.setStatusBarColor(color, layoutFullscreen, withActionBar);
 ```
 
 ## License

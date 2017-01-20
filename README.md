@@ -31,7 +31,7 @@ A library which help you to change status bar color in a simple way.
 ## Download
 
 ```gradle
-compile 'com.github.chenglei1986.statusbar:library:1.0.0'
+compile 'com.github.chenglei1986.statusbar:library:1.0.1'
 ```
 
 

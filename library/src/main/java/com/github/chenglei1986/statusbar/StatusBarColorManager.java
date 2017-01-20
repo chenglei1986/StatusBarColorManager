@@ -58,6 +58,9 @@ public class StatusBarColorManager {
             }
 
         } else {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                mDecorView.setSystemUiVisibility(mDecorView.getSystemUiVisibility() & ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+            }
             if (BrandUtil.checkBrand(BrandUtil.BRAND.XIAOMI)) {
                 StatusBarUtil.setMiuiStatusBarIconDarkMode(mActivity, false);
             } else if (BrandUtil.checkBrand(BrandUtil.BRAND.MEIZU)) {

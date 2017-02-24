@@ -86,8 +86,8 @@ public class StatusBarColorManager {
 
         @Override
         public void setStatusBarColor(@ColorInt int color, boolean layoutFullscreen, boolean withActionBar) {
-            mStatusBarBackground.removeAllViews();
             if (ColorUtil.isLightColor(color)) {
+                mStatusBarBackground.removeAllViews();
                 setStatusBarColorLight(color, layoutFullscreen, withActionBar);
                 View scrimView = new View(mActivity);
                 scrimView.setBackground(ScrimUtil.makeCubicGradientScrimDrawable(0xFF000000, 8, Gravity.TOP));
@@ -107,7 +107,6 @@ public class StatusBarColorManager {
 
         @Override
         public void setStatusBarColor(@ColorInt int color, boolean layoutFullscreen, boolean withActionBar) {
-            mStatusBarBackground.removeAllViews();
             if (ColorUtil.isLightColor(color)) {
                 setStatusBarColorLight(color, layoutFullscreen, withActionBar);
                 mDecorView.setSystemUiVisibility(mDecorView.getSystemUiVisibility() | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);

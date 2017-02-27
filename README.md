@@ -14,6 +14,8 @@ A library which help you to change status bar color in a simple way.
 
 ## Preview
 
+![gif](screenshots/gif.gif)
+
 ### Colored status bar
 
 ![KitKat](screenshots/kitkat.png) ![Lollipop](screenshots/lollipop.png) ![Marshmallow](screenshots/marshmallow.png)

@@ -3,7 +3,7 @@ package com.github.chenglei1986.statusbar;
 import android.os.Build;
 import android.support.annotation.NonNull;
 
-public final class BrandUtil {
+final class BrandUtil {
 
     public enum BRAND {
         SAMSUNG,

@@ -2,27 +2,26 @@ package com.github.chenglei1986.statusbar.sample;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.github.chenglei1986.statusbar.StatusBarColorManager;
 
-public class LayoutFullscreenSample1 extends AppCompatActivity {
+public class DrawableStatusBarActivity extends AppCompatActivity {
 
     private StatusBarColorManager mStatusBarColorManager;
 
-    public static void actionLayoutFullscreenSample1(Context context) {
-        Intent intent = new Intent(context, LayoutFullscreenSample1.class);
+    public static void actionDrawableStatusBar(Context context) {
+        Intent intent = new Intent(context, DrawableStatusBarActivity.class);
         context.startActivity(intent);
     }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_layout_fullscreen_sample1);
+        setContentView(R.layout.activity_drawable_status_bar);
         mStatusBarColorManager = new StatusBarColorManager(this);
-        mStatusBarColorManager.setStatusBarColor(Color.BLACK, true, false);
+        mStatusBarColorManager.setStatusBarBackground(R.drawable.bg, false, true);
     }
 }

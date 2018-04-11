@@ -1,6 +1,6 @@
 package com.github.chenglei1986.statusbar;
 
-public class MathUtil {
+final class MathUtil {
     public static float constrain(float min, float max, float v) {
         return Math.max(min, Math.min(max, v));
     }

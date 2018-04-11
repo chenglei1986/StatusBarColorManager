@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-    private static final String[] TITLES = {"Light", "Dark", "Blue", "LayoutFullscreenSample1", "LayoutFullscreenSample2"};
+    private static final String[] TITLES = {"Light", "Dark", "Blue", "LayoutFullscreenSample1", "LayoutFullscreenSample2", "Drawable"};
     private static final int[] COLORS = {0xFFCCCCCC, 0xFF333333, 0xFF3F51B5};
 
     private ListView mListView;
@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             LayoutFullscreenSample1.actionLayoutFullscreenSample1(this);
         } else if (4 == position) {
             LayoutFullscreenSample2.actionLayoutFullscreenSample2(this);
+        } else if (5 == position) {
+            DrawableStatusBarActivity.actionDrawableStatusBar(this);
         }
     }
 

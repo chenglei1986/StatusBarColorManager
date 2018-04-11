@@ -25,6 +25,10 @@
         <activity
             android:name=".LayoutFullscreenSample2"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
+        <activity
+            android:name=".DrawableStatusBarActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
     </application>
 
 </manifest>

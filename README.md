@@ -33,7 +33,7 @@ A library which help you to change status bar color in a simple way.
 ## Download
 
 ```gradle
-compile 'com.github.chenglei1986.statusbar:library:1.0.2'
+compile 'com.github.chenglei1986.statusbar:library:1.1.0'
 ```
 
 
@@ -46,13 +46,17 @@ StatusBarColorManager statusBarColorManager = new StatusBarColorManager(activity
 boolean layoutFullscreen = true; // or false
 boolean withActionBar = false; // or true
 statusBarColorManager.setStatusBarColor(color, layoutFullscreen, withActionBar);
+//statusBarColorManager.setStatusBarColorRes(R.color.status_bar_color, layoutFullscreen, withActionBar);
+//statusBarColorManager.setStatusBarBackground(drawable, layoutFullscreen, withActionBar);
+//statusBarColorManager.setStatusBarBackground(R.drawable.statu_bar_background, layoutFullscreen, withActionBar);
+//statusBarColorManager.setLightStatusBar(true);
 ```
 
 ## License
 
 MIT License
 
-    Copyright (c) 2016 Darren
+    Copyright (c) 2016-2018 Cheng Lei
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal

@@ -13,7 +13,7 @@ import android.view.Gravity;
 /**
  * Utility methods for creating prettier gradient scrims.
  */
-public class ScrimUtil {
+final class ScrimUtil {
 
     private static final LruCache<Integer, Drawable> cubicGradientScrimCache = new LruCache<>(10);
 

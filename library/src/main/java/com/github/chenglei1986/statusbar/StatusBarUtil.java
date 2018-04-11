@@ -46,7 +46,7 @@ public class StatusBarUtil {
             extraFlagField.invoke(activity.getWindow(), dark ? darkModeFlag : 0, darkModeFlag);
             result = true;
         } catch (Exception e) {
-            //e.printStackTrace();
+            e.printStackTrace();
         }
         return result;
     }
